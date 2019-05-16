@@ -16,4 +16,8 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.
     echo "conda activate base" >> ~/.bashrc
 
 RUN conda install -y h5py tensorflow-gpu keras
+RUN pip install keras-bert
+RUN conda install -c conda-forge pytorch-pretrained-bert
+RUN conda install -c fastai fastai
+RUN conda install -c pytorch pytorch
 WORKDIR /root/user
